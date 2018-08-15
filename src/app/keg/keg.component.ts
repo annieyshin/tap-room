@@ -32,8 +32,6 @@ export class KegComponent implements OnInit {
     }
   }
 
-
-
   constructor() { }
 
   ngOnInit() {

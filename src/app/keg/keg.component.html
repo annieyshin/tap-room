@@ -1,10 +1,11 @@
 <h1>Kegs</h1>
 <ul>
-  <li *ngFor="let keg of kegs" [class.selected]="keg === selectedKeg" [class]="priceColor(keg)">
-    <span (click)="onSelect(keg)">{{ keg.name }}</span>
+  <li *ngFor="let keg of kegs" [class.selected]="keg === selectedKeg" >
+    <span (click)="onSelect(keg)" [class]="priceColor(keg)">{{ keg.name }}</span>
   </li>
 </ul>
 
-<app-keg-detail [keg]="selectedKeg"></app-keg-detail>
+<button>Add new Keg</button>
 
-[()]
+<app-new-keg></app-new-keg>
+<app-keg-detail [keg]="selectedKeg"></app-keg-detail>

@@ -10,3 +10,7 @@ label {
 .marg-top {
   margin-top: 2rem;
 }
+
+app-new-keg {
+  display: none;
+}
