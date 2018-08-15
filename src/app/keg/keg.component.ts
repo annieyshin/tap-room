@@ -35,14 +35,22 @@ export class KegComponent implements OnInit {
   ABVindicator(keg) {
     if (keg.alcoholContent > 5) {
     return true;
-  } else {
+    } else {
     return false;
-  }
+    }
   }
 
 
   makeNewKeg() {
     this.newKegForm = true;
+  }
+
+  closeNewKegForm() {
+    this.newKegForm = null;
+  }
+
+  closeKegDetail() {
+    this.selectedKeg = null;
   }
 
   lessThanTenCheck(keg: Keg) {

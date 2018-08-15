@@ -12,6 +12,10 @@
 
 <div *ngIf="newKegForm">
   <app-new-keg></app-new-keg>
+  <button (click)="closeNewKegForm()">Close</button>
 </div>
 
-<app-keg-detail [keg]="selectedKeg"></app-keg-detail>
+<div *ngIf="selectedKeg">
+  <app-keg-detail [keg]="selectedKeg"></app-keg-detail>
+  <button (click)="closeKegDetail()">Close</button>
+</div>

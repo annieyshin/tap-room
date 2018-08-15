@@ -17,6 +17,7 @@ export class NewKegComponent implements OnInit {
       alert("Fill out all the fields");
     }
   }
+
   constructor() { }
 
   ngOnInit() {
