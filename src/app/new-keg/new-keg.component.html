@@ -1,8 +1,8 @@
-<form class="newKegFormInput">
+<form class="newKegFormInput" (submit)="addNewKeg(newKegName.value, newKegBrand.value, newKegPrice.value, newKegABV.value, newKegPintsLeft.value); newKegName.value=''; newKegBrand.value=''; newKegPrice.value=''; newKegABV.value=''; newKegPintsLeft.value='';">
   <input type="text" #newKegName placeholder="Add new keg name..">
   <input type="text" #newKegBrand placeholder="Add new keg brand">
   <input type="number" #newKegPrice placeholder="Enter $$$ here..">
   <input type="number" #newKegABV placeholder="Enter ABV here..">
   <input type="number" #newKegPintsLeft placeholder="Enter # of pints..">
-  <input type="submit" class="btn btn-success" value="submit" (click)="addNewKeg(newKegName.value, newKegBrand.value, newKegPrice.value, newKegABV.value, newKegPintsLeft.value)">
+  <input type="submit" class="btn btn-success" value="submit">
 </form>
