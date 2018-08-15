@@ -3,7 +3,11 @@
   <li *ngFor="let keg of kegs" [class.selected]="keg === selectedKeg" class="kegNames">
     <span (click)="onSelect(keg)" [class]="priceColor(keg)" >{{ keg.name }}</span>
     <span *ngIf="lessThanTenCheck(keg)">Warning: Less than ten pints left</span>
-    <span *ngIf="ABVindicator(keg)" class="boldText">More than 5% ABV</span>
+
+    <span><img class="beerImage" src='{{getPic()}}'></span>
+
+    <!-- <span data-ng-repeat="x in {{getAbv(keg)}}"><img class="beerImage" src='{{getPic()}}'></span> -->
+
   </li>
 </ul>
 

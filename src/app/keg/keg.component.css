@@ -24,3 +24,7 @@ app-new-keg {
   padding: 15px;
   font-size: 18pt;
 }
+
+.beerImage {
+  width: 5%;
+}

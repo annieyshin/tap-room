@@ -40,6 +40,16 @@ export class KegComponent implements OnInit {
     }
   }
 
+  getPic() {
+    return "assets/beer.jpg" ;
+  }
+
+  getAbv(keg) {
+    let abvNumber = Math.ceil(keg.alcoholContent/5) + 1;
+    return abvNumber;
+  }
+
+
 
   makeNewKeg() {
     this.newKegForm = true;
