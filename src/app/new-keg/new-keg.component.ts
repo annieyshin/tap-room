@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Keg } from '../models/keg';
+import { kegList } from '../models/all-kegs';
 
 @Component({
   selector: 'app-new-keg',
@@ -6,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./new-keg.component.css']
 })
 export class NewKegComponent implements OnInit {
+
 
   constructor() { }
 

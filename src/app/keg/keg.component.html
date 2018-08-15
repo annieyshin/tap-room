@@ -2,10 +2,16 @@
 <ul>
   <li *ngFor="let keg of kegs" [class.selected]="keg === selectedKeg" >
     <span (click)="onSelect(keg)" [class]="priceColor(keg)">{{ keg.name }}</span>
+    <span *ngIf="lessThanTenCheck(keg)">Warning: Less than ten pints left</span>
   </li>
 </ul>
 
-<button>Add new Keg</button>
+<button (click)="makeNewKeg()">Add new Keg</button>
 
-<app-new-keg></app-new-keg>
+
+<div *ngIf="newKegForm">
+  Test
+  <app-new-keg></app-new-keg>
+</div>
+
 <app-keg-detail [keg]="selectedKeg"></app-keg-detail>

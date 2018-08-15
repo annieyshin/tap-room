@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Keg } from '../models/keg';
 import { kegList } from '../models/all-kegs';
-
+import { NewKegComponent} from '../new-keg/new-keg.component';
 
 @Component({
   selector: 'app-keg',
@@ -12,6 +12,7 @@ export class KegComponent implements OnInit {
 
   kegs = kegList;
 
+  newKegForm = null;
 
   selectedKeg: Keg;
   onSelect(keg: Keg): void {
@@ -31,6 +32,20 @@ export class KegComponent implements OnInit {
       return "bg-warning";
     }
   }
+
+  makeNewKeg() {
+    this.newKegForm = true;
+  }
+
+  lessThanTenCheck(keg: Keg) {
+    if (keg.pintsLeft < 10) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+
 
   constructor() { }
 
