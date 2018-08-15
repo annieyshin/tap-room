@@ -4,12 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { PwdComponent } from './pwd/pwd.component';
+import { KegComponent } from './keg/keg.component';
+import { KegDetailComponent } from './keg-detail/keg-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PwdComponent
+    KegComponent,
+    KegDetailComponent
   ],
   imports: [
     BrowserModule,

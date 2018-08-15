@@ -1,0 +1,8 @@
+<h1>Kegs</h1>
+<ul>
+  <li *ngFor="let keg of kegs" [class.selected]="keg === selectedKeg">
+    <span (click)="onSelect(keg)">{{ keg.name }}</span>
+  </li>
+</ul>
+
+<app-keg-detail [keg]="selectedKeg"></app-keg-detail>
