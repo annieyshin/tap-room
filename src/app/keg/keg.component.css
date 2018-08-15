@@ -12,5 +12,15 @@ label {
 }
 
 app-new-keg {
-  display: none;
+  display: grid;
+}
+
+.boldText {
+  font-weight: bold;
+  color: blue;
+}
+
+.kegNames {
+  padding: 15px;
+  font-size: 18pt;
 }

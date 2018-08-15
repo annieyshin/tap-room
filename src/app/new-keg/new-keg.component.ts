@@ -9,7 +9,12 @@ import { kegList } from '../models/all-kegs';
 })
 export class NewKegComponent implements OnInit {
 
-
+  addNewKeg(name, brand, price, alcoholContent, pintsLeft) {
+    let newKeg: Keg = new Keg(name, brand, price, alcoholContent, pintsLeft);
+    console.log(name);
+    console.log(brand);
+    kegList.push(newKeg);
+  }
   constructor() { }
 
   ngOnInit() {

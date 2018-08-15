@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Keg } from '../models/keg';
 import { kegList } from '../models/all-kegs';
-import { NewKegComponent} from '../new-keg/new-keg.component';
 
 @Component({
   selector: 'app-keg',
@@ -29,9 +28,18 @@ export class KegComponent implements OnInit {
     } else if (keg.price > 15) {
       return "bg-danger";
     } else if (keg.price >5) {
-      return "bg-warning";
+      return "bg-info";
     }
   }
+
+  ABVindicator(keg) {
+    if (keg.alcoholContent > 5) {
+    return true;
+  } else {
+    return false;
+  }
+  }
+
 
   makeNewKeg() {
     this.newKegForm = true;

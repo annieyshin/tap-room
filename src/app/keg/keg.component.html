@@ -1,8 +1,9 @@
 <h1>Kegs</h1>
 <ul>
-  <li *ngFor="let keg of kegs" [class.selected]="keg === selectedKeg" >
-    <span (click)="onSelect(keg)" [class]="priceColor(keg)">{{ keg.name }}</span>
+  <li *ngFor="let keg of kegs" [class.selected]="keg === selectedKeg" class="kegNames">
+    <span (click)="onSelect(keg)" [class]="priceColor(keg)" >{{ keg.name }}</span>
     <span *ngIf="lessThanTenCheck(keg)">Warning: Less than ten pints left</span>
+    <span *ngIf="ABVindicator(keg)" class="boldText">More than 5% ABV</span>
   </li>
 </ul>
 
@@ -10,7 +11,6 @@
 
 
 <div *ngIf="newKegForm">
-  Test
   <app-new-keg></app-new-keg>
 </div>
 
