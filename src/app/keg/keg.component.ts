@@ -14,6 +14,8 @@ export class KegComponent implements OnInit {
   newKegForm = null;
   range: number[] = [];
 
+  filterBySale: string = "allKegs";
+
   selectedKeg: Keg;
   onSelect(keg: Keg): void {
     if (this.selectedKeg === keg) {
@@ -34,9 +36,9 @@ export class KegComponent implements OnInit {
   }
 
   progressBarColor(keg) {
-    if (keg.pintsLeft <= 25) {
+    if (Math.trunc((keg.pintsLeft/124)*100) < 25) {
       return "progress-bar progress-bar-striped bg-danger";
-    } else if (keg.pintsLeft <=50) {
+    } else if (Math.trunc((keg.pintsLeft/124)*100) < 50) {
       return "progress-bar progress-bar-striped bg-warning";
     } else {
       return "progress-bar progress-bar-striped bg-primary"
@@ -90,6 +92,21 @@ export class KegComponent implements OnInit {
       return false;
     }
   }
+
+  onChange(optionFromMenu) {
+    this.filterBySale = optionFromMenu;
+  }
+
+
+  toggleOnSale(clickedKeg: Keg, setSale: boolean) {
+    clickedKeg.onSale = setSale;
+  }
+
+
+
+
+
+
 
   constructor() { }
 

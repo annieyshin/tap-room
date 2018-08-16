@@ -36,3 +36,8 @@ app-new-keg {
 .progress {
   margin-top: 10px;
 }
+
+.onSaleDisplay {
+  font-size: 10pt;
+  color: red;
+}

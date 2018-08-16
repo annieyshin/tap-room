@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { KegComponent } from './keg/keg.component';
 import { KegDetailComponent } from './keg-detail/keg-detail.component';
 import { NewKegComponent } from './new-keg/new-keg.component';
+import { OnSalesPipe } from './onSale.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     KegComponent,
     KegDetailComponent,
-    NewKegComponent
+    NewKegComponent,
+    OnSalesPipe
   ],
   imports: [
     BrowserModule,
