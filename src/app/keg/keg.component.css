@@ -2,6 +2,15 @@ label {
   width: 100%;
 }
 
+#KegTitle {
+  color: #CAC042;
+  background-color: #4A2C43;
+  font-family: monospace;
+  padding-left: 5px;
+  font-size: 32pt;
+  text-align: center;
+}
+
 .name {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -22,7 +31,11 @@ app-new-keg {
 
 .kegNames {
   padding: 15px;
-  font-size: 18pt;
+  font-size: 20pt;
+  font-family: monospace;
+  outline: 2px solid gold;
+  color: gold;
+  background-color: #D3BCCD;
 }
 
 .beerImage {
@@ -39,5 +52,11 @@ app-new-keg {
 
 .onSaleDisplay {
   font-size: 10pt;
-  color: red;
+  color: black;
+}
+
+#progressBarText {
+  font-size: 10pt;
+  text-align: center;
+  color: black;
 }

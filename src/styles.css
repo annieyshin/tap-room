@@ -3,10 +3,7 @@
 
 
 body {
-  background-color: beige;
-}
-
-
-html {
-  background: url('/assets/bar.jpg') center;
+  background-color: #FAFAD2;
+  background: url('/assets/bar.jpg');
+  background-repeat: repeat;
 }

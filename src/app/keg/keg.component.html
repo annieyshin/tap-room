@@ -1,17 +1,20 @@
-<h1>Kegs</h1>
+<p id="KegTitle">Kegs</p>
 <div>
   <select (change)="onChange($event.target.value)">
     <option value="allKegs" selected="selected">All Kegs</option>
     <option value="onSaleKegs">Kegs on Sale</option>
     <option value="notOnSaleKegs">Full Priced Kegs</option>
   </select>
+  <br>
+  <br>
   <div *ngFor="let keg of kegs | onSale:filterBySale" [class.selected]="keg === selectedKeg" class="kegNames">
     <span (click)="onSelect(keg)" [class]="priceColor(keg)" >{{ keg.name }}</span>
+    <br>
     <span *ngIf="lessThanTenCheck(keg)">Warning: Less than ten pints left</span>
+    <p id="progressBarText">Stock Quantity: </p>
     <div class="progress">
       <div [class]="progressBarColor(keg)" role="progressbar" [style.width]= "kegPercentage(keg) + '%'" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">{{kegPercentage(keg)}}%</div>
     </div>
-
     <div class="onSaleDisplay">
       <span>Check if on sale</span>
       <input *ngIf="keg.onSale === true" type="checkbox" checked (click)="toggleOnSale(keg, false)"/>
@@ -20,7 +23,8 @@
     <img *ngFor="let number of getAbv(keg)" class="beerImage" src='{{getPic()}}'>
   </div>
 </div>
-<button class="btn btn-primary" (click)="makeNewKeg()">Add new Keg</button>
+<br>
+<button class="btn btn-warning" (click)="makeNewKeg()">Add new Keg</button>
 <br>
 <br>
 

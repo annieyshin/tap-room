@@ -1,6 +1,9 @@
 .jumbotron {
-  background-color: #47476b;
-  border: 5px solid #808080;
+  background-color: #1C767D;
+  border: 7px solid #b2ad7f;
   font-family: sans-serif;
-  color: #ffffcc;
+  color: #CFB53B;
+  font-family: monospace;
+  text-align: center;
+  font-size: 56pt;
 }
