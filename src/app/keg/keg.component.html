@@ -1,16 +1,16 @@
 <h1>Kegs</h1>
-<ul>
-  <li *ngFor="let keg of kegs" [class.selected]="keg === selectedKeg" class="kegNames">
+<div>
+  <div *ngFor="let keg of kegs" [class.selected]="keg === selectedKeg" class="kegNames">
     <span (click)="onSelect(keg)" [class]="priceColor(keg)" >{{ keg.name }}</span>
     <span *ngIf="lessThanTenCheck(keg)">Warning: Less than ten pints left</span>
 
-    <span><img class="beerImage" src='{{getPic()}}'></span>
+    <!-- <span><img class="beerImage" src='{{getPic()}}'></span> -->
 
-    <!-- <span data-ng-repeat="x in {{getAbv(keg)}}"><img class="beerImage" src='{{getPic()}}'></span> -->
 
-  </li>
-</ul>
 
+    <img *ngFor="let number of getAbv(keg)" class="beerImage" src='{{getPic()}}'>
+  </div>
+</div>
 <button (click)="makeNewKeg()">Add new Keg</button>
 
 

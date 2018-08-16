@@ -12,6 +12,7 @@ export class KegComponent implements OnInit {
   kegs = kegList;
 
   newKegForm = null;
+  range: number[] = [];
 
   selectedKeg: Keg;
   onSelect(keg: Keg): void {
@@ -45,9 +46,14 @@ export class KegComponent implements OnInit {
   }
 
   getAbv(keg) {
-    let abvNumber = Math.ceil(keg.alcoholContent/5) + 1;
-    return abvNumber;
+    this.range = [];
+    let abvNumber = Math.ceil(keg.alcoholContent/5);
+    for (let x = 0; x < abvNumber; x++) {
+      this.range.push(x);
+    }
+    return this.range;
   }
+
 
 
 
