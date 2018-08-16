@@ -97,11 +97,19 @@ export class KegComponent implements OnInit {
     this.filterBySale = optionFromMenu;
   }
 
-
   toggleOnSale(clickedKeg: Keg, setSale: boolean) {
     clickedKeg.onSale = setSale;
+    this.salePrice(clickedKeg, setSale);
   }
 
+  salePrice(clickedKeg:Keg, setSale: boolean ) {
+    if (clickedKeg.onSale === true) {
+      clickedKeg.price --;
+    } else {
+      clickedKeg.price ++;
+    }
+    clickedKeg.onSale=setSale;
+  }
 
 
 
