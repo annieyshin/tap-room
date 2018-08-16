@@ -54,6 +54,11 @@ export class KegComponent implements OnInit {
     return this.range;
   }
 
+  kegPercentage(keg) {
+    let percentage = Math.trunc((keg.pintsLeft/124)*100);
+    return percentage;
+  }
+
 
 
 

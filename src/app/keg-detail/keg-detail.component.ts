@@ -10,7 +10,9 @@ export class KegDetailComponent implements OnInit {
   @Input() keg: Keg;
 
   decrementPint() {
-    this.keg.pintsLeft--;
+    if (this.keg.pintsLeft > 0) {
+      this.keg.pintsLeft--;
+    }
   }
 
   constructor() { }

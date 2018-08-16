@@ -4,20 +4,25 @@
     <span (click)="onSelect(keg)" [class]="priceColor(keg)" >{{ keg.name }}</span>
     <span *ngIf="lessThanTenCheck(keg)">Warning: Less than ten pints left</span>
 
-    <!-- <span><img class="beerImage" src='{{getPic()}}'></span> -->
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped" role="progressbar" [style.width]= "kegPercentage(keg) + '%'" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
 
 
 
     <img *ngFor="let number of getAbv(keg)" class="beerImage" src='{{getPic()}}'>
   </div>
 </div>
-<button (click)="makeNewKeg()">Add new Keg</button>
+<button class="btn btn-primary" (click)="makeNewKeg()">Add new Keg</button>
+<br>
+<br>
 
 
 <div *ngIf="newKegForm">
   <app-new-keg></app-new-keg>
-  <button (click)="closeNewKegForm()">Close</button>
+  <button class="btn btn-dark" (click)="closeNewKegForm()">Close</button>
 </div>
+<br>
 
 <div *ngIf="selectedKeg">
   <app-keg-detail [keg]="selectedKeg"></app-keg-detail>

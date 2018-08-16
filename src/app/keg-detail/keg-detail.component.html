@@ -1,40 +1,46 @@
-<div *ngIf="keg">
 
-  <h2>{{keg.name | uppercase}} Details</h2>
-  <p>Price: ${{keg.price}}</p>
-  <p>Brand: {{keg.brand}}</p>
-  <p>Alcohol Content: {{keg.alcoholContent}}%</p>
-  <p>Pints Left: {{keg.pintsLeft}} pints</p>
-  <button (click)="decrementPint()">Sold a pint</button>
-  <br />
-  <br />
-  <div class="kegDetailsDisplay">
-    <div>
-      <label>Edit Name:
-        <input [(ngModel)]="keg.name" placeholder="Name">
-      </label>
-    </div>
-    <div>
-      <label>Edit Price:
-        <input [(ngModel)]="keg.price" placeholder="Price">
-      </label>
-    </div>
-    <div>
-      <label>Edit Brand:
-        <input [(ngModel)]="keg.brand" placeholder="Brand">
-      </label>
-    </div>
-    <div>
-      <label>Edit Alcohol Content:
-        <input [(ngModel)]="keg.alcoholContent" placeholder="Alcohol Content">
-      </label>
-    </div>
-    <div>
-      <label>Edit Pints Left:
-        <input [(ngModel)]="keg.pintsLeft" placeholder="Pints Left">
-      </label>
+<div class="displayWrapper">
+  <div *ngIf="keg">
+
+    <h2>{{keg.name | uppercase}} Details</h2>
+    <p>Price: ${{keg.price}}</p>
+    <p>Brand: {{keg.brand}}</p>
+    <p>Alcohol Content: {{keg.alcoholContent}}%</p>
+    <p>Pints Left: {{keg.pintsLeft}} pints</p>
+    <button (click)="decrementPint()">Sold a pint</button>
+    <br />
+    <br />
+    <div class="kegDetailsDisplay">
+      <div>
+        <label>Edit Name:
+          <input [(ngModel)]="keg.name" placeholder="Name">
+        </label>
+      </div>
+      <div>
+        <label>Edit Price:
+          <input [(ngModel)]="keg.price" placeholder="Price">
+        </label>
+      </div>
+      <div>
+        <label>Edit Brand:
+          <input [(ngModel)]="keg.brand" placeholder="Brand">
+        </label>
+      </div>
+      <div>
+        <label>Edit Alcohol Content:
+          <input [(ngModel)]="keg.alcoholContent" placeholder="Alcohol Content">
+        </label>
+      </div>
+      <div>
+        <label>Edit Pints Left:
+          <input [(ngModel)]="keg.pintsLeft" placeholder="Pints Left">
+        </label>
+      </div>
+      <br>
+
+
+
     </div>
 
   </div>
-
 </div>
