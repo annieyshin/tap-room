@@ -28,3 +28,11 @@ app-new-keg {
 .beerImage {
   width: 5%;
 }
+
+.theKegName {
+  cursor: pointer;
+  padding: 10px;
+}
+.progress {
+  margin-top: 10px;
+}

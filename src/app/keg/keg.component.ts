@@ -25,11 +25,11 @@ export class KegComponent implements OnInit {
 
   priceColor(keg){
     if (keg.price <= 5) {
-      return "bg-success";
+      return "bg-success theKegName";
     } else if (keg.price > 15) {
-      return "bg-danger";
+      return "bg-danger theKegName";
     } else if (keg.price >5) {
-      return "bg-info";
+      return "bg-info theKegName";
     }
   }
 

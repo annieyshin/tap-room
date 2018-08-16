@@ -3,7 +3,6 @@
   <div *ngFor="let keg of kegs" [class.selected]="keg === selectedKeg" class="kegNames">
     <span (click)="onSelect(keg)" [class]="priceColor(keg)" >{{ keg.name }}</span>
     <span *ngIf="lessThanTenCheck(keg)">Warning: Less than ten pints left</span>
-
     <div class="progress">
       <div [class]="progressBarColor(keg)" role="progressbar" [style.width]= "kegPercentage(keg) + '%'" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">{{kegPercentage(keg)}}%</div>
     </div>
