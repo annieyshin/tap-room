@@ -33,6 +33,18 @@ export class KegComponent implements OnInit {
     }
   }
 
+  progressBarColor(keg) {
+    if (keg.pintsLeft <= 25) {
+      return "progress-bar progress-bar-striped bg-danger";
+    } else if (keg.pintsLeft <=50) {
+      return "progress-bar progress-bar-striped bg-warning";
+    } else {
+      return "progress-bar progress-bar-striped bg-primary"
+    }
+  }
+
+
+
   ABVindicator(keg) {
     if (keg.alcoholContent > 5) {
     return true;
@@ -59,9 +71,6 @@ export class KegComponent implements OnInit {
     return percentage;
   }
 
-
-
-
   makeNewKeg() {
     this.newKegForm = true;
   }
@@ -81,8 +90,6 @@ export class KegComponent implements OnInit {
       return false;
     }
   }
-
-
 
   constructor() { }
 
